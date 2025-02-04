@@ -1,0 +1,287 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jfif" href="img/icono.jfif">
+    <title>Zenit</title>
+</head>
+
+<body>
+    <!-- inicio de sesión -->
+<div id="loginModal" class="modal">
+    <div class="modalContent">
+        <span class="closeModal">&times;</span>
+        <form id="loginForm" action="registro.php" method="post">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" placeholder="Introduce tu usuario" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" placeholder="Introduce tu contraseña" required>
+            <button type="submit" class="loginButton">Registrarse</button>
+        </form>
+    </div>
+</div>
+
+    <nav id="nav">
+        <div class="navTop">
+            <div class="navItem">
+                <div class="hamburger" onclick="toggleMenu()" style="float: left;">&#9776;</div>
+                <img src="./img/sneakers.png" alt="" style="float: right; margin-top: 10px;margin-left: 5px;">
+                <button id="openLoginModal" class="identificar" style="float: right; margin-left: 150px;">
+                    <img src="img/identificar.png" style="height: 40px; float: right; filter: brightness(300);">
+                </button>
+            </div>
+            <div class="navItem">
+                <div class="search">
+                    <input type="text" placeholder="Busca..." class="searchInput">
+                    <img src="./img/search.png" width="20" height="20" alt="" class="searchIcon" style="margin-left: 15px;">
+                </div>
+            </div>
+            <div class="navItem">
+                <span class="limitedOffer">¡Ofertas Limitadas!</span>
+            </div>
+            
+        </div>
+        <div class="navBottom">
+            <h3 class="menuItem">AIR FORCE</h3>
+            <h3 class="menuItem">JORDAN</h3>
+            <h3 class="menuItem">BLAZER</h3>
+            <h3 class="menuItem">CRATER</h3>
+            <h3 class="menuItem">HIPPIE</h3>
+            <h3 class="menuItem">JORDAN AIR 1 LOW</h3>
+            <h3 class="menuItem">KAWS</h3>
+        </div>
+    </nav>
+    <div class="slider">
+        <div class="sliderWrapper">
+            <div class="sliderItem">
+                <img src="./img/air.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">AIR FORCE</br> NUEVA</br> TEMPORADA</h1>
+                <h2 class="sliderPrice">119€</h2>
+                <a href="#product">
+                    <button class="buyButton">¡COMPRA AHORA!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/jordan.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">AIR JORDAN</br> NUEVA</br> TEMPORADA</h1>
+                <h2 class="sliderPrice">149€</h2>
+                <a href="#product">
+                    <button class="buyButton">¡COMPRA AHORA!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/blazer.png" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">BLAZER</br> NUEVA</br> TEMPORADA</h1>
+                <h2 class="sliderPrice">109€</h2>
+                <a href="#product">
+                    <button class="buyButton">¡COMPRA AHORA!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/crater.png" alt="" class="sliderImg" style="position: absolute">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">CRATER</br> NUEVA</br> TEMPORADA</h1>
+                <h2 class="sliderPrice">129€</h2>
+                <a href="#product">
+                    <button class="buyButton">¡COMPRA AHORA!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/hippie.png" alt="" class="sliderImg" style="position: absolute">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">HIPPIE</br> NUEVA</br> TEMPORADA</h1>
+                <h2 class="sliderPrice">99€</h2>
+                <a href="#product">
+                    <button class="buyButton">¡COMPRA AHORA!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/jordan1_low.jpg" alt="" class="sliderImg" style="position: absolute; margin-bottom: 10% ;">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">JORDAN AIR 1 LOW</br> NUEVA</br> TEMPORADA</h1>
+                <h2 class="sliderPrice">89€</h2>
+                <a href="#product">
+                    <button class="buyButton">¡COMPRA AHORA!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="./img/Jordan4.png" alt="" class="sliderImg" style="position: absolute; margin-bottom: 10% ;">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">KAWS</br> NUEVA</br> TEMPORADA</h1>
+                <h2 class="sliderPrice">2100€</h2>
+                <a href="#product">
+                    <button class="buyButton">¡COMPRA AHORA!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+   
+    <div class="features">
+        <div class="feature">
+            <img src="./img/shipping.png" alt="" class="featureIcon">
+            <span class="featureTitle">ENVÍO GRATIS</span>
+            <span class="featureDesc">Envío mundial gratuito en todos los pedidos.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/return.png" alt="">
+            <span class="featureTitle">DEVOLUCIÓN EN 30 DÍAS</span>
+            <span class="featureDesc">Devolución sin dudas y reembolso fácil en 14 días.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/gift.png" alt="">
+            <span class="featureTitle">TARJETAS REGALO</span>
+            <span class="featureDesc">Compre tarjetas de regalo y utilice códigos de cupón fácilmente.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/contact.png" alt="">
+            <span class="featureTitle">¡CONTÁCTANOS!</span>
+            <span class="featureDesc">Manténgase en contacto a través de correo electrónico y sistema de soporte.</span>
+        </div>
+    </div>
+
+    <div class="product" id="product">
+        <img src="./img/air.png" alt="" class="productImg">
+        <div class="productDetails">
+            <h1 class="productTitle">AIR FORCE</h1>
+            <h2 class="productPrice">199€</h2>
+            <p class="productDesc">Icónicas zapatillas de diseño clásico y atemporal. Fabricadas con materiales de alta calidad, ofrecen comodidad y durabilidad. Su suela de goma antideslizante y el estilo urbano las convierten en un must-have para cualquier ocasión. Disponibles en varios colores y tallas. Perfectas para lucir con cualquier outfit.</p>
+            <div class="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            <div class="sizes">
+                <div class="size">42</div>
+                <div class="size">43</div>
+                <div class="size">44</div>
+            </div>
+            <button class="productButton">¡COMPRA AHORA!</button>
+        </div>
+        <div class="payment">
+            <h1 class="payTitle">Información Personal</h1>
+            <label>Nombre y Apellidos</label>
+            <input type="text" placeholder="Paco Gonzalez" class="payInput">
+            <label>Númerop de telefono</label>
+            <input type="text" placeholder="+34 768 959 045" class="payInput">
+            <label>Dirección</label>
+            <input type="text" placeholder="Calle Fresa" class="payInput">
+            <h1 class="payTitle">Información de pago</h1>
+            <div class="cardIcons">
+                <img src="./img/visa.png" width="40" alt="" class="cardIcon">
+                <img src="./img/master.png" alt="" width="40" class="cardIcon">
+            </div>
+            <input type="password" class="payInput" placeholder="Número de la tarjeta">
+            <div class="cardInfo">
+                <input type="text" placeholder="mm" class="payInput sm">
+                <input type="text" placeholder="yyyy" class="payInput sm">
+                <input type="text" placeholder="cvv" class="payInput sm">
+            </div>
+            <button class="payButton">
+                ¡Verificar!</button>
+            <span class="close">X</span>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="galleryItem">
+            <h1 class="galleryTitle">¡Sé tú mismo!</h1>
+            <img src="https://images.pexels.com/photos/9295809/pexels-photo-9295809.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="galleryImg">
+        </div>
+        <div class="galleryItem">
+            <img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="galleryImg">
+            <h1 class="galleryTitle">
+                Este es el primer día de tu nueva vida</h1>
+        </div>
+        <div class="galleryItem">
+            <h1 class="galleryTitle">
+                ¡Hazlo!</h1>
+            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="galleryImg">
+        </div>
+    </div>
+    <div class="newSeason">
+        <div class="nsItem">
+            <img src="https://images.pexels.com/photos/4753986/pexels-photo-4753986.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="nsImg">
+        </div>
+        <div class="nsItem">
+            <h3 class="nsTitleSm">NOVEDADES DE INVIERNO</h3>
+            <h1 class="nsTitle">Nueva Temporada</h1>
+            <h1 class="nsTitle">Nueva Colección</h1>
+            <a href="#nav">
+                <button class="nsButton">ELIGE TU ESTILO</button>
+            </a>
+        </div>
+        <div class="nsItem">
+            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="nsImg">
+        </div>
+    </div>
+    <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Sobre Nosotros</h1>
+                <ul class="fList">
+                    <li class="fListItem">Compañía</li>
+                    <li class="fListItem">Contacto</li>
+                    <li class="fListItem">Carreras</li>
+                    <li class="fListItem">Afiliados</li>
+                    <li class="fListItem">Tiendas</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Enlaces útiles</h1>
+                <ul class="fList">
+                    <li class="fListItem">Ayuda</li>
+                    <li class="fListItem">Devolución</li>
+                    <li class="fListItem">FAQ</li>
+                    <li class="fListItem">Comentario</li>
+                    <li class="fListItem">Historia</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Productos</h1>
+                <ul class="fList">
+                    <li class="fListItem">Air Force</li>
+                    <li class="fListItem">Air Jordan</li>
+                    <li class="fListItem">Blazer</li>
+                    <li class="fListItem">Crater</li>
+                    <li class="fListItem">Hippie</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Apúntate para recibir nuestras noticias y ofertas</h1>
+                <div class="fMail">
+                    <input type="text" placeholder="tu@email.com" class="fInput">
+                    <button class="fButton">¡Unete!</button>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Síguenos</h1>
+                <div class="fIcons">
+                    <img src="./img/facebook.png" alt="" class="fIcon">
+                    <img src="./img/twitter.png" alt="" class="fIcon">
+                    <img src="./img/instagram.png" alt="" class="fIcon">
+                    <img src="./img/whatsapp.png" alt="" class="fIcon">
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <span class="copyright">@Zenit. Todos los derechos reservados. 2024.</span>
+            </div>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+
+</html>
