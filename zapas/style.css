@@ -368,12 +368,102 @@ html {
     display: block; /* Visible por defecto */
 }
   .productButton {
-    float: right;
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #3a3a3a;
+  width: 180px;
+  height: 60px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  }
+  .productButton::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    width: 106%;
+    height: 120%;
+    z-index: -1;
+    border-radius: inherit;
+    transition: all 0.3s;
+  }
+  .gradient-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 106%;
+    height: 115%;
+    overflow: hidden;
+    border-radius: inherit;
+    z-index: -2;
+    filter: blur(10px);
+    transition: all 0.3s;
+  }
+  .gradient {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    transition: all 0.3s;
+    background-image: linear-gradient(
+      90deg,
+      hsl(226, 81%, 64%),
+      hsl(271, 81%, 64%),
+      hsl(316, 81%, 64%),
+      hsl(1, 81%, 64%),
+      hsl(46, 81%, 64%),
+      hsl(91, 81%, 64%),
+      hsl(136, 81%, 64%),
+      hsl(181, 81%, 64%)
+    );
+    animation: rotate 2s linear infinite;
+    filter: blur(10px);
+  }
+  .label {
+    width: 156px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 22px;
+    background-color: rgba(43, 43, 43, 1);
+    background-image: linear-gradient(
+      180deg,
+      rgb(43, 43, 43) 0%,
+      rgb(68, 68, 68) 100%
+    );
+  }
+  
+  .button:hover .gradient-container {
+    transform: translate(-50%, -50%) scale(0.98);
+    filter: blur(5px);
+  }
+  
+  .button:hover .gradient {
+    filter: blur(5px);
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
   }
   
   .productButton:hover {
