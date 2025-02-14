@@ -395,6 +395,7 @@ html {
     width: 106%;
     height: 120%;
     z-index: -1;
+    color: white;
     border-radius: inherit;
     transition: all 0.3s;
   }
@@ -422,14 +423,14 @@ html {
     transition: all 0.3s;
     background-image: linear-gradient(
       90deg,
-      hsl(226, 81%, 64%),
-      hsl(271, 81%, 64%),
-      hsl(316, 81%, 64%),
-      hsl(1, 81%, 64%),
-      hsl(46, 81%, 64%),
-      hsl(91, 81%, 64%),
-      hsl(136, 81%, 64%),
-      hsl(181, 81%, 64%)
+      hsl(240, 1%, 25%),
+      hsl(270, 2%, 54%),
+      hsl(0, 0%, 100%),
+      hsl(0, 0%, 0%),
+      hsl(0, 0%, 66%),
+      hsl(0, 0%, 100%),
+      hsl(120, 1%, 16%),
+      hsl(180, 1%, 39%)
     );
     animation: rotate 2s linear infinite;
     filter: blur(10px);
@@ -574,7 +575,7 @@ html {
     font-size: 14px;
   }
   
-  @media screen and (max-width:900px) {
+  @media screen and (max-width:1100px) {
     nav{
       padding: 20px;
     }
