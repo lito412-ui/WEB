@@ -2,10 +2,10 @@
 // procesar_contacto.php
 
 //CONFIG
-$db_host = "TU_SERVIDOR_MYSQL"; // Ejemplo: localhost, o el servidor que te proporcione tu hosting
-$db_name = "TU_NOMBRE_BASE_DE_DATOS"; // Ejemplo: mi_tienda_db
-$db_user = "TU_USUARIO_BASE_DE_DATOS"; // Ejemplo: root, o el usuario de tu BD
-$db_pass = "TU_CONTRASENA_BASE_DE_DATOS"; // La contraseña para ese usuario
+$db_host = "sql306.infinityfree.com"; // Ejemplo: localhost, o el servidor que te proporcione tu hosting
+$db_name = "if0_38954785_zenit"; // Ejemplo: mi_tienda_db
+$db_user = "if0_38954785"; // Ejemplo: root, o el usuario de tu BD
+$db_pass = "lolito412aA"; // La contraseña para ese usuario
 
 
 
