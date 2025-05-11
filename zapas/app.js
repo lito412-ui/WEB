@@ -195,8 +195,8 @@ loginForm.addEventListener("submit", (event) => {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    // Aquí puedes validar las credenciales (lógica del servidor)
-    if (username === "admin" && password === "1234") { // Ejemplo básico
+    //validar las credenciales (lógica del servidor)
+    if (username === "admin" && password === "1234") { 
         alert("Inicio de sesión exitoso");
         loginModal.style.display = "none";
     } else {
@@ -206,4 +206,22 @@ loginForm.addEventListener("submit", (event) => {
 function toggleMenu() {
   const navBottom = document.querySelector(".navBottom");
   navBottom.classList.toggle("active");
+}
+const contactModal = document.getElementById("contactModal");
+const openContactModalButton1 = document.getElementById("contactFeatureButton");
+const openContactModalButton2 = document.getElementById("footerContactButton");
+
+
+// Mostrar el modal de contacto al hacer clic en el botón de Features
+if (openContactModalButton1) {
+    openContactModalButton1.addEventListener("click", () => {
+        if (contactModal) contactModal.style.display = "flex";
+    });
+}
+
+// Mostrar el modal de contacto al hacer clic en el botón del Footer
+if (openContactModalButton2) {
+    openContactModalButton2.addEventListener("click", () => {
+        if (contactModal) contactModal.style.display = "flex";
+    });
 }

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -13,19 +14,45 @@
 </head>
 
 <body>
-    <!-- inicio de sesión -->
-<div id="loginModal" class="modal">
-    <div class="modalContent">
-        <span class="closeModal">&times;</span>
-        <form id="loginForm" action="registro.php" method="post">
-            <label for="username">Usuario:</label>
-            <input type="text" id="username" placeholder="Introduce tu usuario" required>
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" placeholder="Introduce tu contraseña" required>
-            <button type="submit" class="loginButton">Registrarse</button>
-        </form>
+    <!-- Modal de inicio de sesión -->
+    <div id="loginModal" class="modal">
+        <div class="modalContent">
+            <span class="closeModal" id="closeLoginModal">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm" action="registro.php" method="post">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" placeholder="Introduce tu usuario" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" required>
+                <button type="submit" class="formButton">Registrarse</button>
+            </form>
+        </div>
     </div>
-</div>
+
+    <!-- Modal de Contacto -->
+    <div id="contactModal" class="modal">
+        <div class="modalContent contactModalContent">
+            <span class="closeModal" id="closeContactModal">&times;</span>
+            <h2>Contáctanos</h2>
+            <p>Envíanos tu consulta y te responderemos a la brevedad.</p>
+            <div id="contactFormResponse"></div> <!-- Para mostrar mensajes de éxito/error -->
+            <form id="contactForm" action="procesar_contacto.php" method="post">
+                <label for="nombre_contacto">Nombre Completo:</label>
+                <input type="text" id="nombre_contacto" name="nombre_contacto" placeholder="Ej: Juan Pérez" required>
+                
+                <label for="email_contacto">Correo Electrónico:</label>
+                <input type="email" id="email_contacto" name="email_contacto" placeholder="Ej: juan.perez@example.com" required>
+                
+                <label for="asunto_contacto">Asunto:</label>
+                <input type="text" id="asunto_contacto" name="asunto_contacto" placeholder="Ej: Consulta sobre producto" required>
+                
+                <label for="mensaje_contacto">Mensaje:</label>
+                <textarea id="mensaje_contacto" name="mensaje_contacto" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                
+                <button type="submit" class="formButton">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
 
     <nav id="nav">
         <div class="navTop">
@@ -45,7 +72,6 @@
             <div class="navItem">
                 <span class="limitedOffer">¡Ofertas Limitadas!</span>
             </div>
-            
         </div>
         <div class="navBottom">
             <h3 class="menuItem">AIR FORCE</h3>
@@ -141,7 +167,7 @@
             <span class="featureTitle">TARJETAS REGALO</span>
             <span class="featureDesc">Compre tarjetas de regalo y utilice códigos de cupón fácilmente.</span>
         </div>
-        <div class="feature">
+        <div class="feature" id="contactFeatureButton">
             <img class="featureIcon" src="./img/contact.png" alt="">
             <span class="featureTitle">¡CONTÁCTANOS!</span>
             <span class="featureDesc">Manténgase en contacto a través de correo electrónico y sistema de soporte.</span>
@@ -237,7 +263,7 @@
                 <h1 class="fMenuTitle">Sobre Nosotros</h1>
                 <ul class="fList">
                     <li class="fListItem">Compañía</li>
-                    <li class="fListItem">Contacto</li>
+                    <li class="fListItem" id="footerContactButton">Contacto</li> <!-- Botón de contacto en el footer -->
                     <li class="fListItem">Carreras</li>
                     <li class="fListItem">Afiliados</li>
                     <li class="fListItem">Tiendas</li>
