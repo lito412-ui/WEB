@@ -1,0 +1,46 @@
+/* Estilos adicionales para centrar texto en botones */
+.button {
+    text-align: center !important;
+    justify-content: center !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.actions {
+    text-align: center !important;
+    justify-content: center !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+.actions li {
+    display: inline-block !important;
+    margin: 0.5em !important;
+}
+
+/* Mejora de visibilidad para el menú */
+#menu ul a {
+    font-weight: 600 !important;
+    font-size: 1.05em !important;
+}
+
+#menu ul .opener {
+    font-weight: 600 !important;
+    font-size: 1.05em !important;
+}
+
+#menu ul ul a {
+    font-weight: 500 !important;
+    padding-left: 2em !important;
+}
+
+/* Mejora para el botón de cerrar menú */
+.close-button {
+    margin-bottom: 1.5em !important;
+    background-color: rgba(210, 215, 217, 0.15) !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.close-button:hover {
+    background-color: rgba(210, 215, 217, 0.25) !important;
+}

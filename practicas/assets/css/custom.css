@@ -1,0 +1,440 @@
+/* Estilos personalizados para EXAMIS SLUS */
+
+:root {
+  --color-primary: #4a7c59;     /* Verde oscuro - Color principal */
+  --color-secondary: #8fb996;   /* Verde claro - Color secundario */
+  --color-accent: #f9a03f;      /* Naranja - Color de acento */
+  --color-text: #333333;        /* Gris oscuro - Color de texto principal */
+  --color-light: #f5f5f5;       /* Gris claro - Fondos claros */
+  --color-dark: #2c3e50;        /* Azul oscuro - Fondos oscuros */
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-primary);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.button {
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.button.big {
+  font-size: 1.1em;
+  padding: 0.75em 2em;
+}
+
+/* Header y navegación */
+#header {
+  border-bottom: 2px solid var(--color-secondary);
+  padding: 1.5em 0;
+}
+
+#header .logo {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--color-primary);
+}
+
+#header .icons a {
+  color: var(--color-primary);
+  font-size: 1.2em;
+  margin-left: 1em;
+}
+
+#header .icons a:hover {
+  color: var(--color-accent);
+}
+
+/* Sidebar */
+#sidebar {
+  background: linear-gradient(to bottom, var(--color-dark), #1a252f);
+  color: white;
+}
+
+#sidebar h2 {
+  color: white;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.5em;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Mejora de visibilidad del menú */
+#sidebar nav ul li a {
+  color: white;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 0.75em 0;
+  letter-spacing: 0.03em;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+#sidebar nav ul li a:hover {
+  color: var(--color-accent);
+  border-left: 3px solid var(--color-accent);
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#sidebar nav ul li span.opener {
+  color: white;
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.75em 0;
+  border-left: 3px solid transparent;
+}
+
+#sidebar nav ul li span.opener:hover {
+  color: var(--color-accent);
+  border-left: 3px solid var(--color-accent);
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#sidebar nav ul ul {
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#sidebar nav ul ul li a {
+  font-size: 1em;
+  padding: 0.5em 0;
+}
+
+#sidebar .contact li {
+  padding-left: 2.5em;
+}
+
+#sidebar .contact li.icon:before {
+  color: var(--color-accent);
+  font-size: 1.2em;
+}
+
+/* Mejora del buscador */
+#sidebar #search input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.1em;
+  padding: 0.8em;
+}
+
+#sidebar #search input:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-accent);
+}
+
+#sidebar #search input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Estilo para las sugerencias del buscador */
+.suggestions-box {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  margin-top: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: var(--color-text);
+}
+
+.suggestion-item:hover {
+  background-color: var(--color-light);
+  color: var(--color-accent);
+}
+
+/* Banner */
+#banner {
+  padding: 4em 0;
+}
+
+#banner h1 {
+  font-size: 2.5em;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+#banner p {
+  font-size: 1.1em;
+  margin-bottom: 2em;
+}
+
+#banner .image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+#banner .image img {
+  transition: transform 0.5s ease;
+}
+
+#banner .image:hover img {
+  transform: scale(1.03);
+}
+
+/* Secciones */
+section {
+  margin: 3em 0;
+}
+
+section header.major {
+  border-bottom: 2px solid var(--color-secondary);
+  margin-bottom: 2em;
+}
+
+section header.major h2 {
+  color: var(--color-primary);
+  position: relative;
+  display: inline-block;
+}
+
+section header.major h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+/* Mini posts */
+.mini-posts article {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 1.5em;
+  transition: transform 0.3s ease;
+}
+
+.mini-posts article:hover {
+  transform: translateY(-5px);
+}
+
+.mini-posts article p {
+  padding: 0.8em;
+  background-color: white;
+  margin: 0;
+}
+
+/* Formularios */
+input, select, textarea {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(74, 124, 89, 0.2);
+}
+
+/* Footer */
+#footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2em;
+  margin-top: 2em;
+}
+
+/* Responsive */
+@media screen and (max-width: 1280px) {
+  #banner h1 {
+    font-size: 2.2em;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #banner {
+    padding: 3em 0;
+  }
+  
+  #banner h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #banner {
+    padding: 2em 0;
+  }
+  
+  #banner h1 {
+    font-size: 1.8em;
+  }
+  
+  section {
+    margin: 2em 0;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Nuevas secciones */
+.feature-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 2em;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.feature-box .icon {
+  color: var(--color-primary);
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.testimonial {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.testimonial:before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 4em;
+  color: var(--color-secondary);
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+.testimonial .author {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1.5em;
+}
+
+.gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Mapa */
+#map {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+
+/* Formulario de contacto */
+.contact-form {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form .field {
+  margin-bottom: 1.5em;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+}
+
+.contact-form button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.75em 2em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--color-accent);
+}
